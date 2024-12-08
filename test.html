@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findLongestWord(sentence) {
+           const arraySentence = sentence.split(' ');
+           const len = arraySentence.length;
+           let n = 0;
+           for (let i = 0; i < len; i += 1) {
+            if (arraySentence[i].length > arraySentence[n].length) {
+                n = i;
+            }            
+           }
+           console.log(arraySentence[n]);        
+        }
+        findLongestWord('The quick brown fox');
+        findLongestWord('A long and winding road');
+        findLongestWord('No words here');
+
+    </script>
+
+/**
+* Find the longest word in the sentence. If there are multiple longest words,
+* the function returns the first one encountered.
+*
+* @param {string} sentence - The input sentence.
+* @returns {string} - The longest word in the sentence.
+*
+* @example:
+*   findLongestWord('The quick brown fox') => 'quick'
+*   findLongestWord('A long and winding road') => 'winding'
+*   findLongestWord('No words here') => 'words'
+*/
+function findLongestWord(/* sentence */) {
+ throw new Error('Not implemented');
+}
+    
+</body>
+</html>
