@@ -184,8 +184,16 @@ function removeLastOccurrences(/* str, value */) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
+function sumOfCodes(str = '') {
+  let n = 0;
+  if (str === null || str === undefined) {
+    return 0;
+  }
+  for (let i = 0; i < str.length; i += 1) {
+    const b = str.charCodeAt(i);
+    n += b;
+  }
+  return n;
 }
 
 /**
@@ -265,8 +273,10 @@ function reverseString(str) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  const a = str.split('');
+  const b = a.sort();
+  return b.join('');
 }
 
 /**
