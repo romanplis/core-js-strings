@@ -291,8 +291,8 @@ function orderAlphabetically(str) {
  *   containsSubstring('JavaScript is Fun', 'Python') => false
  *   containsSubstring('12345', '34') => true
  */
-function containsSubstring(/* str, substring */) {
-  throw new Error('Not implemented');
+function containsSubstring(str, substring) {
+  return str.includes(substring);
 }
 
 /**
@@ -309,8 +309,21 @@ function containsSubstring(/* str, substring */) {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
+function countVowels(str) {
+  const a = str.split('a').length - 1;
+  const e = str.split('e').length - 1;
+  const i = str.split('i').length - 1;
+  const o = str.split('o').length - 1;
+  const u = str.split('u').length - 1;
+  const y = str.split('y').length - 1;
+  const A = str.split('A').length - 1;
+  const E = str.split('E').length - 1;
+  const I = str.split('I').length - 1;
+  const O = str.split('O').length - 1;
+  const U = str.split('U').length - 1;
+  const Y = str.split('Y').length - 1;
+  const sum = a + e + i + o + u + y + A + E + I + O + U + Y;
+  return sum;
 }
 
 /**
