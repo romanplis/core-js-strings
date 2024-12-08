@@ -501,7 +501,6 @@ function encodeToRot13(str) {
       result += str[i];
     }
   }
-  console.log(result);
   return result;
 }
 
